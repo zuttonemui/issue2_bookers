@@ -33,17 +33,15 @@
 </div>
 
 <%= form_with model: @book, url: '/books', method: :post do |f|%> 
-  <div>
-    <div>
-    <label for="book_title">Title</label>
-    </div>
+  <div class="field">
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-  <div>
-    <label for="book_body">Body</label>
+  <div class="field">
+    <%= f.label :body %>
     <%= f.text_area :body %>
   </div>
-  <div>
+  <div class="action">
     <%= f.submit 'Create Book' %>
   </div>
 <% end %>
